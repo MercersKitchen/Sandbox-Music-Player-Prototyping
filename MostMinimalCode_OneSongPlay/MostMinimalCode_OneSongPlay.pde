@@ -51,6 +51,16 @@ void keyPressed()
   //
   if ( key=='f' || key=='F' ) song1.skip(1000); // skip forward 1 second (1000 milliseconds)
   if ( key=='r' || key=='R' ) song1.skip(-1000); // skip backwards 1 second (1000 milliseconds)
+  //
+  if ( key=='s' || key=='S' ) { //STOP Button
+    if ( song1.isPlaying() ) {
+      song1.pause();
+      song1.rewind();
+    } else { //Song is not playing
+      song1.rewind();
+    }
+  }//End STOP Button
+  //
 }//End keyPressed
 //
 void mousePressed() {
