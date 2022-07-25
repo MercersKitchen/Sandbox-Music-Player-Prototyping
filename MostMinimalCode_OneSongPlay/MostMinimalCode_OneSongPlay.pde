@@ -25,7 +25,7 @@ void draw() {
 void keyPressed()
 {
   //First Play Button
-  if ( key=='p' || key=='P' ) song1.play(); //Parameter is milli-seconds from start of audio file to start playing
+  //if ( key=='p' || key=='P' ) song1.play(); //Parameter is milli-seconds from start of audio file to start playing
   //
   //Alternate Play Button, as a finite loop() && infinite loop()
   //Only press a number for this code below
@@ -60,6 +60,17 @@ void keyPressed()
       song1.rewind();
     }
   }//End STOP Button
+  //
+  if ( key=='p' || key=='P' ) {//PAUSE Button
+    if ( song1.isPlaying() ) {
+      song1.pause();
+    } else if ( song1.position() >= song1.length() - song1.length()*1/5 ) {
+      song1.pause();
+      song1.rewind();
+    } else {
+      song1.play();
+    }
+  }//End PAUSE Button
   //
 }//End keyPressed
 //
