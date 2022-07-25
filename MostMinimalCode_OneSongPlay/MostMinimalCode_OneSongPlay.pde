@@ -18,7 +18,7 @@ void setup()
 void draw(){
   if () println("There are", ,"loops left.");
   if () println("Looping Infinity");
-  if () println("Play Once");
+  if ( song1.isPlaying() && !song1.isLooping() ) println("Play Once");
 }//End draw
 //
 void keyPressed()
