@@ -50,7 +50,7 @@ void keyPressed()
   }//End Mute Button
   //
   if ( key=='f' || key=='F' ) song1.skip(1000); // skip forward 1 second (1000 milliseconds)
-  if () ;
+  if ( key=='r' || key=='R' ) song1.skip(-1000); // skip backwards 1 second (1000 milliseconds)
 }//End keyPressed
 //
 void mousePressed() {
