@@ -41,7 +41,11 @@ void keyPressed()
   if ( key >= '2' || key=='0' ) println ("I donot loop that much, press i for infinite loop");
   //
   if ( key=='m' || key=='M' ) {//Mute Button
-    
+    if ( song1.isMuted() ) {
+      song1.unmute();
+    } else {
+      song1.mute();
+    }
   }//End Mute Button
 }//End keyPressed
 //
