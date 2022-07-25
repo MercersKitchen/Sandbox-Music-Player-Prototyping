@@ -22,8 +22,27 @@ void keyPressed()
   //First Play Button
   //if ( key=='p' || key=='P' ) song1.play(); //Parameter is milli-seconds from start of audio file to start playing
   //
-  int loopNum3 = 2; //Local Variable plays once and loops twice
-  if ( key=='l' || key=='L' ) song1.loop(loopNum3); //Parameter is Parameter is number of repeats
+  //Alternate Play Button, as a finite loop() && infinite loop()
+  //Only press a number for this code below
+  println(key);
+  if ( key=='1' || key=='9' ) { //LOOP Function
+    //Note: "9" is assumed to be massive ... simulates infinity
+    if ( key=='1' ) println("Looping Once");
+    if ( key=='9' ) println("Looping 9 Times");
+    String keystr = String.valueOf(key);
+    println("Number of Repeats is", keystr);
+    int loopNum = int(keystr);
+    song1.loop(loopNum); //Parameter is Parameter is number of repeats
+    //if ( key=='l' || key=='L' ) song1.loop(loopNum);
+    
+  }//End LOOP Functions
+  
+  
+  
+  /*int loopNum3 = 2; //Local Variable plays once and loops twice
+  
+  */
+  //
 }//End keyPressed
 //
 void mousePressed() {}//End mousePressed
