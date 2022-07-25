@@ -15,8 +15,8 @@ void setup()
   song1 = minim.loadFile("groove.mp3"); //able to pass absolute path, file name & extension, and URL
 }//End setup
 //
-void draw(){
-  if ( song1.isLooping() && song1.loopCount()!=-1 ) println("There are", song1.loopCount(),"loops left.");
+void draw() {
+  if ( song1.isLooping() && song1.loopCount()!=-1 ) println("There are", song1.loopCount(), "loops left.");
   if ( song1.isLooping() && song1.loopCount()==-1 ) println("Looping Infinity");
   if ( song1.isPlaying() && !song1.isLooping() ) println("Play Once");
 }//End draw
@@ -35,13 +35,17 @@ void keyPressed()
     println("Number of Repeats is", keystr);
     int loopNum = int(keystr);
     song1.loop(loopNum); //Parameter is Parameter is number of repeats
-    //if ( 
+    //if (
   }//End LOOP Function Once
   if (key=='i' || key=='I' ) song1.loop(); //Infinite Loop, no parameter OR -1
   if ( key >= '2' || key=='0' ) println ("I donot loop that much, press i for infinite loop");
   //
+  if ( key=='m' || key=='M' ) {//Mute Button
+    
+  }//End Mute Button
 }//End keyPressed
 //
-void mousePressed() {}//End mousePressed
+void mousePressed() {
+}//End mousePressed
 //
 //End MAIN Program
