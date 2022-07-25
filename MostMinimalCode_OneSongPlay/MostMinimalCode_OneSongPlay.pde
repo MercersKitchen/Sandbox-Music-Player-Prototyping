@@ -16,8 +16,8 @@ void setup()
 }//End setup
 //
 void draw(){
-  if () println("There are", ,"loops left.");
-  if () println("Looping Infinity");
+  if ( song1.isLooping() && song1.loopCount()!=-1 ) println("There are", ,"loops left.");
+  if ( song1.isLooping() && song1.loopCount()==-1 ) println("Looping Infinity");
   if ( song1.isPlaying() && !song1.isLooping() ) println("Play Once");
 }//End draw
 //
