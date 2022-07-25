@@ -16,7 +16,9 @@ void setup()
 }//End setup
 //
 void draw(){
-  
+  if () println("There are", ,"loops left.");
+  if () println("Looping Infinity");
+  if () println("Play Once");
 }//End draw
 //
 void keyPressed()
@@ -36,7 +38,7 @@ void keyPressed()
     //if ( 
   }//End LOOP Function Once
   if (key=='i' || key=='I' ) song1.loop(); //Infinite Loop, no parameter OR -1
-  if ( key >= '2' ) println ("I donot loop that much, press i for infinite loop");
+  if ( key >= '2' || key=='0' ) println ("I donot loop that much, press i for infinite loop");
   //
 }//End keyPressed
 //
