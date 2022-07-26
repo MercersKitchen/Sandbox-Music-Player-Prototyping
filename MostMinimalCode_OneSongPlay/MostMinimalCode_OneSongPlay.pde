@@ -8,6 +8,7 @@ import ddf.minim.ugens.*;
 //Global Variables
 Minim minim; //creates object to access all functions
 AudioPlayer song1; //creates a playlist
+AudioMetaData songMetaData1;
 //
 PFont titleFont;
 color black=#000000, purple=#2C08FF, resetWhite=255; 
