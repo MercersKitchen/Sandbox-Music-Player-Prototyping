@@ -9,6 +9,7 @@ import ddf.minim.ugens.*;
 Minim minim; //creates object to access all functions
 AudioPlayer song1; //creates a playlist
 //
+PFont titleFont;
 color black=#000000, purple=#2C08FF, resetWhite=255; 
 float titleX, titleY, titleWidth, titleHeight;
 //
@@ -26,6 +27,8 @@ void setup()
   titleWidth = width*1/2;
   titleHeight = height*1/10;
   //
+  titleFont = createFont ("Harrington", 55);
+  //
 }//End setup
 //
 void draw() {
@@ -37,7 +40,8 @@ void draw() {
   background (black);
   rect(titleX, titleY, titleWidth, titleHeight);
   fill(purple); //Ink
-  textAlign();
+  textAlign( CENTER, CENTER ); //Align X&Y, see Processing.org / Reference
+  //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
   textFont(titleFont, 30); // Change size number until it fits
   text();
   fill(resetWhite);
