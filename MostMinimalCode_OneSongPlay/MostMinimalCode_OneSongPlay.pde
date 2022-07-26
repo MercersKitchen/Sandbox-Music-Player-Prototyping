@@ -10,11 +10,22 @@ Minim minim; //creates object to access all functions
 AudioPlayer song1; //creates a playlist
 //
 color black=#000000, purple=#2C08FF, resetWhite=255; 
+float titleX, titleY, titleWidth, titleHeight;
 //
 void setup()
 {
+  size (500, 400); //Landscape
+  //Be careful to include display orientation checker and display CANVAS checker
+  //
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder, like loadImage
   song1 = minim.loadFile("groove.mp3"); //able to pass absolute path, file name & extension, and URL
+  //
+  //Populatation
+  titleX = width*1/4;
+  titleY = height*0;
+  titleWidth = width*1/2;
+  titleHeight = height*1/10;
+  //
 }//End setup
 //
 void draw() {
