@@ -19,7 +19,16 @@ void draw() {
   if ( song1.isLooping() && song1.loopCount()!=-1 ) println("There are", song1.loopCount(), "loops left.");
   if ( song1.isLooping() && song1.loopCount()==-1 ) println("Looping Infinity");
   if ( song1.isPlaying() && !song1.isLooping() ) println("Play Once");
-  println("Song position", song1.position(), "Song Length", song1.length() );
+  println("Song position", song1.position(), "Song Length", song1.length() ); //Amount of time left is a calculation
+  //
+  background (black);
+  rect(titleX, titleY, titleWidth, titleHeight);
+  fill(purple); //Ink
+  textAlign();
+  textFont(titleFont, 30); // Change size number until it fits
+  text();
+  fill(resetWhite);
+  //
 }//End draw
 //
 void keyPressed()
