@@ -20,6 +20,7 @@ void setup()
   //
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder, like loadImage
   song1 = minim.loadFile("groove.mp3"); //able to pass absolute path, file name & extension, and URL
+  songMetaData1 = song1.getMetaData();
   //
   //Populatation
   titleX = width*1/4;
@@ -43,7 +44,7 @@ void draw() {
   textAlign( CENTER, CENTER ); //Align X&Y, see Processing.org / Reference
   //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
   textFont(titleFont, 30); // Change size number until it fits
-  text( metaData, titleX, titleY, titleWidth, titleHeight );
+  text( songMetaData1.title(), titleX, titleY, titleWidth, titleHeight );
   fill(resetWhite);
   //
 }//End draw
