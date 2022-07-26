@@ -43,7 +43,7 @@ void draw() {
   textAlign( CENTER, CENTER ); //Align X&Y, see Processing.org / Reference
   //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
   textFont(titleFont, 30); // Change size number until it fits
-  text();
+  text( metaData, titleX, titleY, titleWidth, titleHeight );
   fill(resetWhite);
   //
 }//End draw
