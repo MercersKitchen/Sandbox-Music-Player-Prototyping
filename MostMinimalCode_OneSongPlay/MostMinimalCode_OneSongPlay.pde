@@ -9,6 +9,8 @@ import ddf.minim.ugens.*;
 Minim minim; //creates object to access all functions
 AudioPlayer song1; //creates a playlist
 //
+color black=#000000, purple=#2C08FF, resetWhite=255; 
+//
 void setup()
 {
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder, like loadImage
